@@ -1,0 +1,6 @@
+{
+  "name": "18.01.2024 — Our Story",
+  "description": "A private romantic digital story and interactive birthday gift.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', 'Amiri', Georgia, serif;
+    --font-body: 'Alexandria', 'Tajawal', system-ui, -apple-system, sans-serif;
+    --font-amiri: 'Amiri', serif;
+    --font-editorial: 'Cormorant Garamond', 'Amiri', serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #fdfaf9;
+    color: #37232b;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: var(--font-serif);
+  }
+
+  .font-editorial {
+    font-family: var(--font-editorial);
+  }
+
+  .font-amiri {
+    font-family: var(--font-amiri);
+  }
+
+  .font-modern {
+    font-family: var(--font-body);
+  }
+}
+
+/* Custom romantic luxury glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(244, 213, 219, 0.55);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(247, 222, 227, 0.4);
+}
+
+.glass-panel-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 246, 248, 0.75) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(238, 203, 211, 0.6);
+}
+
+/* Subtle luxury parchment texture overlay */
+.parchment-bg {
+  background-color: #faf5f0;
+  background-image: radial-gradient(rgba(215, 178, 178, 0.15) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Polaroid subtle shadow & pin */
+.polaroid-card {
+  background: #ffffff;
+  box-shadow: 0 10px 30px -10px rgba(116, 50, 68, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-4px) rotate(0deg) scale(1.01);
+  box-shadow: 0 20px 35px -10px rgba(116, 50, 68, 0.18), 0 6px 12px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf3f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #e9b7c2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d48a9b;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
