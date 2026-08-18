@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Heart, Sparkles, Infinity as InfinityIcon } from 'lucide-react';
+import { Heart, Sparkles, Infinity as InfinityIcon, Download, FileCode } from 'lucide-react';
 import { SPECIAL_CONFESSION_BUS_PHOTO, FALLBACK_CONFESSION_BUS_PHOTO } from '../data/memories';
 
 interface FinalSectionProps {
@@ -102,6 +102,17 @@ export const FinalSection: React.FC<FinalSectionProps> = ({
           <p className="font-editorial text-xs text-[#9B6877] tracking-widest uppercase">
             Made with all my heart exclusively for you • 18.01.2024 → 18.08.2026 → ∞
           </p>
+
+          <div className="pt-2 flex items-center justify-center">
+            <a
+              href="/standalone-website.html"
+              download="index.html"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#F3CDD6] text-xs font-semibold text-[#8E2F48] shadow-xs hover:bg-[#FFF5F7] hover:border-[#8E2F48] transition-all cursor-pointer"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>تنزيل الموقع كملف واحد مستقل (index.html)</span>
+            </a>
+          </div>
         </motion.div>
 
       </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Upload, Camera, Save, RotateCcw, Plus, Image as ImageIcon, Key, Check } from 'lucide-react';
+import { X, Upload, Camera, Save, RotateCcw, Plus, Image as ImageIcon, Key, Check, Download, FileCode } from 'lucide-react';
 import { MemoryItem } from '../types';
 import { SPECIAL_CONFESSION_BUS_PHOTO, FALLBACK_CONFESSION_BUS_PHOTO } from '../data/memories';
 
@@ -391,6 +391,25 @@ export const CustomizerDrawer: React.FC<CustomizerDrawerProps> = ({
                   <p className="text-[11px] text-[#9A6575]">
                     الرمز الحالي الافتراضي: 1801 (18 جانفي)
                   </p>
+                </div>
+
+                {/* Single-File HTML Export Card */}
+                <div className="space-y-3 pt-4 border-t border-[#F8E3E7]">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-[#8E2F48]">
+                    <FileCode className="w-4 h-4" />
+                    <span>تصدير وتنزيل الموقع كملف واحد (index.html)</span>
+                  </div>
+                  <p className="text-xs text-[#7A4B5B] font-amiri leading-relaxed">
+                    يمكنك تنزيل هذا الموقع كاملاً كملف HTML واحد مستقل ومضمن فيه كافة الصور، الأصوات، والذكريات لفتحه مباشرة على أي جهاز بدون إنترنت أو خادم:
+                  </p>
+                  <a
+                    href="/standalone-website.html"
+                    download="index.html"
+                    className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#8E2F48] to-[#B55972] text-white text-xs font-semibold shadow-md hover:opacity-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>تنزيل ملف index.html المستقل (Offline Single File)</span>
+                  </a>
                 </div>
               </div>
             )}

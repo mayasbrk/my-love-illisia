@@ -1,12 +1,13 @@
 import { DictionaryEntry, LoveReason, MemoryItem, QuizQuestion, RandomMemoryCard, TimelineMilestone } from '../types';
+import { EMBEDDED_CONFESSION_PHOTO } from './photoBase64';
 
 export const RELATIONSHIP_START_DATE = '2024-01-18T00:00:00';
 export const BIRTHDAY_MONTH = 0; // January (0-indexed in JS)
 export const BIRTHDAY_DAY = 23;
 export const DEFAULT_SECRET_PIN = '18/01/2024'; // Default password based on 18/01/2024 date
 
-// The real photo taken in the bus on the way home after the confession at Les Oliviers (Bejaia)
-export const SPECIAL_CONFESSION_BUS_PHOTO = '/confession-bus-photo.jpg';
+// The real photo embedded in Base64 for 100% offline standalone single-file index.html support
+export const SPECIAL_CONFESSION_BUS_PHOTO = EMBEDDED_CONFESSION_PHOTO;
 export const FALLBACK_CONFESSION_BUS_PHOTO = 'https://i.ibb.co/zV1jFwMG/IMG-2066.jpg';
 
 // Google Maps link for the exact location of the confession (Les Oliviers in Bejaia)
